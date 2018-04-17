@@ -2,5 +2,9 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from certificates.models import IssuedCertificate, SavedTemplate
 
 # Register your models here.
+
+
+admin.site.register([IssuedCertificate, SavedTemplate])

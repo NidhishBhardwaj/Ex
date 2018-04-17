@@ -25,7 +25,7 @@ SECRET_KEY = '9yx2d1y^^v!g=u_o0lq6j=ldubd#7t9$e$4jj0$38&z-z+hyw1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'academics',
+    'admissions',
+    'certificates',
+    'examination',
+    'fees_management',
+    'front_office',
+    'health_records',
+    'hostel',
+    'inventory',
+    'library',
+    'scholarships',
+    'school_structure',
+    'students',
+    'transportation',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +89,12 @@ WSGI_APPLICATION = 'School.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'exdb',
+        'USER': 'exdbuser',
+        'PASSWORD': 'n1i2d3h4i5s6h789',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
